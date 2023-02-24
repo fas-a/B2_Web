@@ -55,6 +55,7 @@
           <li><a class="nav-link scrollto " href="#portfolio">Gallery</a></li>
           <li><a class="nav-link scrollto" href="#counts">Documentation</a></li>
           <li><a class="nav-link scrollto" href="#table">Jam Kerja</a></li>
+          <li><a class="nav-link scrollto" href="#task">Task</a></li>
           <li><a class="nav-link scrollto" href="#testimonials">Quotes</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
@@ -552,6 +553,52 @@
         </div>
       </div>
     </section><!-- Table section -->
+
+    <section id="task">
+      <h1>Test</h1>
+  
+      <!-- TABLE CONSTRUCTION-->
+      <table id='table'>
+        <!-- HEADING FORMATION -->
+        <tr>
+          <th>Id</th>
+          <th>Judul</th>
+          <th>Waktu Berita Release</th>
+        </tr>
+  
+        <script>
+          $(document).ready(function () {
+    
+                      // FETCHING DATA FROM JSON FILE
+                      $.getJSON("./BeritaTerkini.json", 
+                              function (data) {
+                          var student = '';
+    
+                          // ITERATING THROUGH OBJECTS
+                          $.each(data, function (key, value) {
+    
+                              //CONSTRUCTION OF ROWS HAVING
+                              // DATA FROM JSON OBJECT
+                              student += '<tr>';
+                              student += '<td>' + 
+                                  value.id + '</td>';
+    
+                              student += '<td>' + 
+                                  value.judul + '</td>';
+    
+                              student += '<td>' + 
+                                  value.waktu + '</td>';
+  
+                              student += '</tr>';
+                          });
+                            
+                          //INSERTING ROWS INTO TABLE 
+                          $('#table').append(student);
+                      });
+                  });
+        </script>
+      </table>
+    </section>
 
 
     <!-- ======= Testimonials Section ======= -->
