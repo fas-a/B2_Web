@@ -586,7 +586,7 @@
         <div class="row no-gutters">
           <div data-aos="fade-right" data-aos-delay="100">
             <div class="content d-flex flex-column justify-content-center">
-              <h3 class="resume-title" style="margin-left: auto; margin-right: auto;">Data Web Scraping</h3>
+              <h3 class="resume-title" style="margin-left: auto; margin-right: auto;">Data Scraping 1</h3>
               <div class="tbl-header">
                 <table cellpadding="0" cellspacing="0" border="0">
                   <thead>
@@ -595,6 +595,7 @@
                       <th>Judul</th>
                       <th>Kategori</th>
                       <th>Waktu Berita Release</th>
+                      <th>Waktu Scraping Data</th>
                     </tr>
                   </thead>
                 </table>
@@ -602,6 +603,7 @@
               <div class="tbl-content">
                 <table cellpadding="0" cellspacing="0" border="0">
                   <tbody id="datawebscrap">
+                    
                     <script>
                       $(document).ready(function () {
         
@@ -626,10 +628,13 @@
         
                               student += '<td>' +
                                 value.waktu + '</td>';
+                              
+                              student += '<td>' +
+                                value.waktu_scraping + '</td>';
         
                               student += '</tr>';
                             });
-        
+      
                             //INSERTING ROWS INTO TABLE 
                             $('#datawebscrap').append(student);
                           });
