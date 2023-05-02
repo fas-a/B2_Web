@@ -603,38 +603,38 @@
               <div class="tbl-content">
                 <table cellpadding="0" cellspacing="0" border="0">
                   <tbody id="datawebscrap">
-                    
+
                     <script>
                       $(document).ready(function () {
-        
+
                         // FETCHING DATA FROM JSON FILE
                         $.getJSON("./BeritaTerkini.json",
                           function (data) {
                             var student = '';
                             // ITERATING THROUGH OBJECTS
                             $.each(data, function (key, value) {
-        
+
                               //CONSTRUCTION OF ROWS HAVING
                               // DATA FROM JSON OBJECT
                               student += '<tr>';
                               student += '<td>' +
                                 value.id + '</td>';
-        
+
                               student += '<td>' +
                                 value.judul + '</td>';
-        
+
                               student += '<td>' +
                                 value.kategori + '</td>';
-        
+
                               student += '<td>' +
                                 value.waktu + '</td>';
-                              
+
                               student += '<td>' +
                                 value.waktu_scraping + '</td>';
-        
+
                               student += '</tr>';
                             });
-      
+
                             //INSERTING ROWS INTO TABLE 
                             $('#datawebscrap').append(student);
                           });
@@ -662,7 +662,6 @@
                       <th>Rank</th>
                       <th>Cover Game</th>
                       <th>Judul Game</th>
-                      <th>Tanggal Release</th>
                       <th>Plathfrom</th>
                       <th>Score</th>
                       <th>Waktu Scraping Data</th>
@@ -689,15 +688,12 @@
                               student += '<tr>';
                               student += '<td>' +
                                 value.id + '</td>';
-                              
+
                               student += '<td><img src=\"webscrap\\' +
                                 value.id + '.png\"></td>';
 
                               student += '<td>' +
                                 value.judul + '</td>';
-
-                              student += '<td>' +
-                                value.release + '</td>';
 
                               student += '<td>' +
                                 value.plathfrom + '</td>';
@@ -722,6 +718,41 @@
             </div><!-- End .content-->
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="table" class="table">
+      <div class="container" data-aos="fade-up">
+        <div class="row no-gutters">
+          <div data-aos="fade-right" data-aos-delay="100">
+            <div class="content d-flex flex-column justify-content-center">
+              <h3 class="resume-title" style="margin-left: auto; margin-right: auto;">JAM KERJA</h3>
+              <div class="tbl-header">
+                <table cellpadding="0" cellspacing="0" border="0">
+                  <thead>
+                    <tr>
+                      <th>Visualisasi Data</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+              <div style="border: 1px solid rgba(0, 0, 0, 0.521);">
+                <table cellpadding="0" cellspacing="0" border="0">
+                  <tbody>
+                    <tr>
+                      <td><iframe title="Visualsisasi Kelas 1B" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=eee1d23c-692b-418c-be8c-56db50814a6a&autoAuth=true&ctid=98374cd7-c8b8-413c-8476-b8722ae7e8e8" frameborder="0" allowFullScreen="true"></iframe></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+      </div>
+    </section><!-- Table section -->
+    <section >
+      <div>
+        
       </div>
     </section>
 
